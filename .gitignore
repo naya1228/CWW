@@ -22,6 +22,7 @@ a.out
 target
 .scripts
 .direnv/
+.envrc
 
 # Local dev files
 opencode-dev
