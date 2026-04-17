@@ -24,9 +24,18 @@
             bun
             nodejs_20
             pkg-config
+            wrapGAppsHook4
             openssl
             git
+            rustc
+            cargo
+            cargo-tauri
+            librsvg
+            webkitgtk_4_1
           ];
+          shellHook = ''
+            export XDG_DATA_DIRS="$GSETTINGS_SCHEMAS_PATH"
+          '';
         };
       });
 
