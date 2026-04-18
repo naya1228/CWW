@@ -4,15 +4,25 @@
   "version": "0.1.0",
   "identifier": "com.naya.waifu",
   "build": {
-    "frontendDist": "../src"
+    "beforeDevCommand": "bun run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "bun run build",
+    "frontendDist": "../dist"
   },
   "app": {
     "withGlobalTauri": true,
     "windows": [
       {
-        "width": 800,
-        "height": 600,
-        "decorations": false
+        "label": "main",
+        "title": "waifu",
+        "width": 400,
+        "height": 400,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": false,
+        "shadow": false,
+        "resizable": true,
+        "skipTaskbar": false
       }
     ],
     "security": {
@@ -22,6 +32,12 @@
   "bundle": {
     "active": true,
     "targets": "all",
-    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"]
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
   }
 }
